@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Family Book</title>
+        <style>
+            #picture{
+                height: 200px;
+                border: solid;
+                border-style: groove;
+                border-color: gray;
+            }
+            #personname{
+                font-family: cursive;
+            }
+            h1{
+                font-family: cursive;
+            }
+        </style>
+    </head>
+    <body>
+
+        <center>
+        <h1>Familia Liber</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Rilievo_di_altare_monumentale_con_processione_sacrficale_%28personaggi_della_gens_claudia%29%2C_42-43_dc%2C_dalla_zona_di_s._vitale-mausoleo_di_galla_placidia_02.jpg" id="picture">
+        <hr>
+        <h2 id="personname"></h2>
+        <hr>
+        <button type="button" onclick="update()">NEXT</button>
+        </center>
+    </body>
+    <script>
+                                var images = ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/MSR-Ra342c-DM_%281%29.jpg/1200px-MSR-Ra342c-DM_%281%29.jpg","https://upload.wikimedia.org/wikipedia/commons/d/db/Rome_Agrippina_Minor.jpg", "https://i.natgeofe.com/n/78d3522c-687d-4e05-8c0f-d0462524b979/caligula-opener.jpg"];
+            var names = ["Germanicus","Agrippina the Elder","Caligula"];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 3
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("picture").src = updatedImage;
+                document.getElementById("personname").innerHTML = updatedName;
+            }
+    </script>
+</html>
